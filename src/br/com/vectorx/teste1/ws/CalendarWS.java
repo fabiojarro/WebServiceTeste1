@@ -7,7 +7,7 @@ import org.joda.time.DateTime;
 import br.com.vectorx.teste1.regras.Calendario;
 import br.com.vectorx.teste1.util.DataUtil;
 
-@WebService
+@WebService(endpointInterface="br.com.vectorx.teste1.ws.CalendarWS",serviceName="CalendarWS")
 public class CalendarWS {
 	
 	public boolean isDataNaoUtil(String data){		
