@@ -13,7 +13,8 @@ public class Calendario {
 
 	private static DateTime diaNaoUtil(DateTime datetime){
 		datetime = datetime.dayOfMonth().roundFloorCopy();
-		Tbdata tbdata = new TbdataDaoImpl().buscaProximoFeriado(datetime.toCalendar(Locale.getDefault()));
+		ITbdataDao tbdataDao = new TbdataDaoImpl();
+		Tbdata tbdata = tbdataDao.buscaProximoFeriado(datetime.toCalendar(Locale.getDefault()));
 		if (tbdata != null){
 			return new DateTime(tbdata.getDatainicio());	
 		}else{

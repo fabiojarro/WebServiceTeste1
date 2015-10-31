@@ -11,8 +11,12 @@ import br.com.vectorx.teste1.util.JpaUtil;
 
 public class TbanoDaoImpl implements ITbanoDao{
 	
+	public TbanoDaoImpl(){
+		
+	}
+	
 	public Tbano buscaPorAno(Integer ano) {
-		EntityManager manager = JpaUtil.getEntityManager();
+		EntityManager manager = new JpaUtil().getEntityManager();
 		Query query = manager.createQuery("select tb from Tbano tb where tb.ano=:pAno");
 		query.setParameter("pAno", ano);
 		

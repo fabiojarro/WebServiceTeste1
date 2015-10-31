@@ -4,11 +4,15 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public final class JpaUtil {
+public class JpaUtil {
+	
+	public JpaUtil() {
+		
+	}
 	
 	private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("teste1");
 
-    public static EntityManager getEntityManager(){
+    public EntityManager getEntityManager(){
     	return factory.createEntityManager();
     }
 }

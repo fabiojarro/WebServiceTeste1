@@ -4,6 +4,8 @@ import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import br.com.vectorx.teste1.dao.ITbdataDao;
@@ -12,12 +14,17 @@ import br.com.vectorx.teste1.util.JpaUtil;
 
 public class TbdataDaoImpl implements ITbdataDao {
 
+	public TbdataDaoImpl() {
+		
+	}
 	public Tbdata buscaPorData(Calendar calendar) {		
 		
-		EntityManager manager = JpaUtil.getEntityManager();
+		EntityManager manager = new JpaUtil().getEntityManager();
+		
 		Query query = manager.createQuery
 						("select tb from Tbdata tb where :pData>=tb.datainicio and" +
 						" :pData <=tb.datafim");
+		
 		query.setParameter("pData", calendar);
 		
 		@SuppressWarnings("unchecked")
@@ -27,11 +34,16 @@ public class TbdataDaoImpl implements ITbdataDao {
 	}
 	
 	public Tbdata buscaProximoFeriado(Calendar calendar){
-		EntityManager manager = JpaUtil.getEntityManager();
 		
+		//EntityManager manager = new JpaUtil().getEntityManager();	
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("teste1");
+
+	    EntityManager manager = factory.createEntityManager();
+	    
 		Query query = manager.createQuery
 						("select tb from Tbdata tb where tb.datainicio>:pData" +
 						" order by tb.datainicio");
+		
 		query.setParameter("pData", calendar);		
 		@SuppressWarnings("unchecked")
 		List<Tbdata> tbdata = query.getResultList();
