@@ -12,7 +12,7 @@ import br.com.vectorx.teste1.regras.Calendario;
 import br.com.vectorx.teste1.util.DataUtil;
 import br.com.vectorx.teste1.ws.fault.DataException;
 
-@WebService
+@WebService(endpointInterface="br.com.vectorx.teste1.ws.CalendarWS",serviceName="CalendarWS")
 public class CalendarWS {
 	@WebMethod(operationName="VerificaDataNaoUtil")
 	@WebResult(name="DataNaoUtil")
