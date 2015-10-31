@@ -25,6 +25,8 @@ public class CalendarWS {
 		}
 		return Calendario.isDataValida(dateTime);
 	}
+	
+	
 	@WebMethod(operationName="RetornaProximaDataNaoUtil")
 	@WebResult(name="ProximaDataUtil")
 	public String getDataNaoUtil(){
