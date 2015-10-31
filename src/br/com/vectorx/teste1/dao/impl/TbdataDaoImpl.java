@@ -14,7 +14,7 @@ public class TbdataDaoImpl implements ITbdataDao {
 
 	public Tbdata buscaPorData(Calendar calendar) {		
 		
-		EntityManager manager = new JpaUtil().getEntityManager();
+		EntityManager manager = JpaUtil.getEntityManager();
 		Query query = manager.createQuery
 						("select tb from Tbdata tb where :pData>=tb.datainicio and" +
 						" :pData <=tb.datafim");
@@ -27,7 +27,8 @@ public class TbdataDaoImpl implements ITbdataDao {
 	}
 	
 	public Tbdata buscaProximoFeriado(Calendar calendar){
-		EntityManager manager = new JpaUtil().getEntityManager();
+		EntityManager manager = JpaUtil.getEntityManager();
+		
 		Query query = manager.createQuery
 						("select tb from Tbdata tb where tb.datainicio>:pData" +
 						" order by tb.datainicio");

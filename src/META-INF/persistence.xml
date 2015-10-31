@@ -9,11 +9,13 @@
 	
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-		<class>br.com.vectorx.teste1.entidade</class>
+		<class>br.com.vectorx.teste1.entidade.Tbano</class>
+		<class>br.com.vectorx.teste1.entidade.Tbdata</class>
+		<class>br.com.vectorx.teste1.entidade.Tbtipo</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test/vectorx" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:~/test/vectorx" />
 			<property name="javax.persistence.jdbc.user" value="sa" />
 			<property name="javax.persistence.jdbc.password" value="" />
 

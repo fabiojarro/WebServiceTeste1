@@ -34,7 +34,7 @@ insert into tbano (ano) values (2014);
 insert into tbtipo (descricao) values ('Feriado Nacional');
 insert into tbtipo (descricao) values ('Ponto Facultativo');
 
-insert into tbdata (fkano,fktipo,datainicio,datafim,descricao) values (1,1,'2015-01-01 00:00:00','2015-01-01 23:59:59','Confraternização universal');
+insert into tbdata (fkano,fktipo,datainicio,datafim,descricao) values (1,1,'2015-01-01 00:00:00','2015-01-01 23:59:59','ConfraternizaÃ§Ã£o universal');
 insert into tbdata (fkano,fktipo,datainicio,datafim,descricao) values (1,2,'2015-02-20 00:00:00','2015-02-20 23:59:59','Carnaval');
 insert into tbdata (fkano,fktipo,datainicio,datafim,descricao) values (1,2,'2015-02-21 00:00:00','2015-02-21 23:59:59','Carnaval');
 insert into tbdata (fkano,fktipo,datainicio,datafim,descricao) values (1,2,'2015-02-22 00:00:00','2015-02-22 14:00:00','Quarta-feira de Cinzas');
@@ -42,19 +42,19 @@ insert into tbdata (fkano,fktipo,datainicio,datafim,descricao) values (1,1,'2015
 
 /**
 
-1º de janeiro – feriado nacional – Confraternização universal
-20 de fevereiro – ponto facultativo – Carnaval
-21 de fevereiro – ponto facultativo – Carnaval
-22 de fevereiro – ponto facultativo até as 14 horas – Quarta-feira de Cinzas
-6 de abril – ponto facultativo – Paixão de Cristo
-21 de abril – feriado nacional – Tiradentes
-1º de maio – feriado nacional – Dia Mundial do Trabalho
-7 de junho – ponto facultativo – Corpus Christi
-7 de setembro – feriado nacional – Independência do Brasil
-12 de outubro – feriado nacional – Nossa Senhora Aparecida
-28 de outubro – ponto facultativo – Dia do Servidor Público
-2 de novembro – feriado nacional – Finados
-15 de novembro – feriado nacional – Proclamação da República
-24 de dezembro – ponto facultativo – Véspera do Natal
-25 de dezembro – feriado nacional – Natal
-31 de dezembro – ponto facultativo – Véspera de Ano-Novo**/
+1ï¿½ de janeiro ï¿½ feriado nacional ï¿½ Confraternizaï¿½ï¿½o universal
+20 de fevereiro ï¿½ ponto facultativo ï¿½ Carnaval
+21 de fevereiro ï¿½ ponto facultativo ï¿½ Carnaval
+22 de fevereiro ï¿½ ponto facultativo atï¿½ as 14 horas ï¿½ Quarta-feira de Cinzas
+6 de abril ï¿½ ponto facultativo ï¿½ Paixï¿½o de Cristo
+21 de abril ï¿½ feriado nacional ï¿½ Tiradentes
+1ï¿½ de maio ï¿½ feriado nacional ï¿½ Dia Mundial do Trabalho
+7 de junho ï¿½ ponto facultativo ï¿½ Corpus Christi
+7 de setembro ï¿½ feriado nacional ï¿½ Independï¿½ncia do Brasil
+12 de outubro ï¿½ feriado nacional ï¿½ Nossa Senhora Aparecida
+28 de outubro ï¿½ ponto facultativo ï¿½ Dia do Servidor Pï¿½blico
+2 de novembro ï¿½ feriado nacional ï¿½ Finados
+15 de novembro ï¿½ feriado nacional ï¿½ Proclamaï¿½ï¿½o da Repï¿½blica
+24 de dezembro ï¿½ ponto facultativo ï¿½ Vï¿½spera do Natal
+25 de dezembro ï¿½ feriado nacional ï¿½ Natal
+31 de dezembro ï¿½ ponto facultativo ï¿½ Vï¿½spera de Ano-Novo**/
